@@ -10,7 +10,7 @@ import java.util.List;
 @Setter
 @Entity
 @Table(name = "dipendenti")
-public class Dipendendente {
+public class Dipendente {
     @Id
     @Column(name = "email", nullable = false)
     private String email;
@@ -27,10 +27,10 @@ public class Dipendendente {
     @OneToMany(mappedBy = "dipendente", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Dispositivo> dispositivi;
 
-    public Dipendendente() {
+    public Dipendente() {
         this.avatar = "https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg?s=612x612&w=0&k=20&c=BIbFwuv7FxTWvh5S3vB6bkT0Qv8Vn8N5Ffseq84ClGI=";
     }
-    public Dipendendente(String email, String nome, String cognome) {
+    public Dipendente(String email, String nome, String cognome) {
         this.email = email;
         this.nome = nome;
         this.cognome = cognome;

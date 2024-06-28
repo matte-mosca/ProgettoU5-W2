@@ -29,7 +29,7 @@ public class Dispositivo {
     @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn (name = "dipendente_email")
-    private Dipendendente dipendendente;
+    private Dipendente dipendendente;
 
     @Override
     public String toString() {
